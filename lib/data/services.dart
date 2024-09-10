@@ -12,9 +12,9 @@ class Services {
 
     if (response.statusCode == 200) {
       var jsonData = response.body;
+      return productFromJson(jsonData);
     } else {
       return null;
     }
-    return null;
   }
 }

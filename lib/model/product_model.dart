@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:get/get.dart';
+
 List<Product> productFromJson(String str) =>
     List<Product>.from(json.decode(str).map((x) => Product.fromJson(x)));
 
@@ -26,6 +28,8 @@ class Product {
   String productApiUrl;
   String apiFeaturedImage;
   List<ProductColor> productColors;
+
+  var like = false.obs;
 
   Product({
     required this.id,

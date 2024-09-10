@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_state_api/controller/controller.dart';
+import 'package:getx_state_api/view/product_tile.dart';
 
 class Mypage extends StatelessWidget {
   Mypage({super.key});
@@ -51,8 +52,8 @@ class Mypage extends StatelessWidget {
             ),
             itemCount: controller.productList.length,
             itemBuilder: (context, index) {
-              return Container(
-                color: Colors.red,
+              return ProductTile(
+                product: controller.productList[index],
               );
             },
           ),
